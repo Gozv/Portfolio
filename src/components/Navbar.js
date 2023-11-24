@@ -1,42 +1,66 @@
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
+  useEffect(() => {
+    const listItems = document.querySelectorAll(".main-menu li");
+
+    listItems.forEach((listItem) => {
+      listItem.addEventListener("click", () => {
+        listItems.forEach((otherItem) => {
+          otherItem.classList.remove("active");
+        });
+        listItem.classList.add("active");
+      });
+    });
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      listItems.forEach((listItem) => {
+        listItem.removeEventListener("click", () => {
+          listItems.forEach((otherItem) => {
+            otherItem.classList.remove("active");
+          });
+          listItem.classList.add("active");
+        });
+      });
+    };
+  }, []); // Empty dependency array to run the effect only once on mount
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <Link href="/" className="navbar-brand">
-          Simple Portfolio
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link
-                href="/blog"
-                className="nav-link active"
-                aria-current="page"
-              >
-                Blog
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/github" className="nav-link">
-                Github
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav className="main-menu">
+      <ul>
+        <li>
+          <Link href="/">
+            <i className="fa fa-home nav-icon"></i>
+            <span className="nav-text">Home</span>
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/blog">
+            <i className="fa fa-pen nav-icon"></i>
+            <span className="nav-text">Blog</span>
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/github">
+            <i className="fa-brands fa-github nav-icon"></i>
+            <span className="nav-text">Github</span>
+          </Link>
+        </li>
+
+        
+
+        <li>
+          <Link target="_blank" href="https://www.linkedin.com/in/gonzalo-vignolles/">
+          <i className="fa-brands fa-linkedin nav-icon"></i>
+            <span className="nav-text">Linkedin</span>
+          </Link>
+        </li>
+      </ul>
+
     </nav>
   );
 };

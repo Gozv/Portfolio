@@ -1,54 +1,25 @@
-export const skills = [
-  {
-    skill: "Javascript",
-    percentage: 100,
-  },
-  {
-    skill: "Golang",
-    percentage: 80,
-  },
-  {
-    skill: "Nodejs",
-    percentage: 90,
-  },
-  {
-    skill: "Blockchain",
-    percentage: 40,
-  },
-  {
-    skill: "Physics",
-    percentage: 70,
-  },
-  {
-    skill: "Economics",
-    percentage: 70,
-  },
-  {
-    skill: "Machine Learning",
-    percentage: 70,
-  },
-];
 
 export const experiences = [
   {
-    title: "Software developer at Microsoft",
+    title: "Bootcamp Fullstack Fundación Empujar",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem officiis fugiat vel animi aliquam inventore rem. Quo laudantium temporibus cupiditate. Aut?",
-    from: 2000,
-    to: 2005,
+      "Empujarcoders",
+      from: "may 2022",
+      to: "dec 2022",
   },
   {
-    title: "Software developer at Google",
+    title: "Universidad Tecnologica Nacional ",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem officiis fugiat vel animi aliquam inventore rem. Quo laudantium temporibus cupiditate. Aut?",
-    from: 2005,
-    to: 2007,
+      "Tecnicatura univ en programación/Sistemas",
+      from: "may 2023",
+    to: "In progress",
   },
   {
-    title: "Software developer at SpaceX",
+    title: "English C1",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem officiis fugiat vel animi aliquam inventore rem. Quo laudantium temporibus cupiditate. Aut?",
-    from: 2010,
+      "Certificado Efset",
+    from: "Certificate: https://www.efset.org/cert/tjmXM7",
+    to: null,
   },
 ];
 
@@ -114,3 +85,5 @@ export const posts = [
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Faie.edu.au%2Fwp-content%2Fuploads%2F2018%2F03%2Fgame-programming-03.jpg",
   },
 ];
+
+

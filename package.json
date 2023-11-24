@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "animate.css": "^4.1.1",
     "bootswatch": "^5.3.1",
     "classnames": "^2.3.2",
+    "lodash": "^4.17.21",
     "next": "^13.4.19",
     "nprogress": "^0.2.0",
     "prop-types": "^15.8.1",
@@ -17,5 +19,8 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
   }
 }

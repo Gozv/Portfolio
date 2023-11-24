@@ -27,9 +27,9 @@ const Layout = ({ children, title, footer = true, dark = false }) => {
   }, []);
 
   return (
-    <div className={classNames({ "bg-dark": dark, "bg-light": !dark })}>
+    <div className={classNames({ "bg-dark": dark, "BgColor": !dark })}>
       <Navbar />
-      <main className="container py-4">
+      <main className="container py-4 ">
         {/* Title */}
         {title && (
           <h1 className={classNames("text-center", { "text-light": dark })}>
@@ -44,7 +44,7 @@ const Layout = ({ children, title, footer = true, dark = false }) => {
       {footer && (
         <footer className="bg-dark text-light text-center">
           <div className="container p-4">
-            <h1>&copy; Ryan Ray Portfolio</h1>
+            <h1>&copy; Gonzalo Vignolles Portfolio</h1>
             <p>2000 - {new Date().getFullYear()}</p>
             <p>All rights Reserved.</p>
           </div>
